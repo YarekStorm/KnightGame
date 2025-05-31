@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.knight.InventoryController"
+            stylesheets="@inventory.css">
+
+    <center>
+        <ComboBox fx:id="knightComboBox" promptText="Оберіть лицаря" />
+        <TableView fx:id="tableView">
+            <columns>
+                <TableColumn fx:id="nameColumn" text="Назва"/>
+                <TableColumn fx:id="typeColumn" text="Тип"/>
+                <TableColumn fx:id="weightColumn" text="Вага"/>
+                <TableColumn fx:id="priceColumn" text="Ціна"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+
+        <Button text="Додати" onAction="#handleAdd"/>
+            <Button text="Видати лицарю" onAction="#handleGiveToKnight"/>
+
+            <Button text="Видалити" onAction="#handleDelete"/>
+            <Button text="Сортувати за вагою" onAction="#handleSort"/>
+            <Button text="Пошук за ціною" onAction="#handleSearch"/>
+            <Button text="Загальна вартість" onAction="#handleTotal"/>
+        </HBox>
+    </bottom>
+</BorderPane>

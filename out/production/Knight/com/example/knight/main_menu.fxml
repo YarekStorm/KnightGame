@@ -7,7 +7,11 @@
 <StackPane xmlns:fx="http://javafx.com/fxml"
            fx:controller="com.example.knight.MainMenuController">
 
-    <ImageView fx:id="backgroundImage" fitWidth="960" fitHeight="600" preserveRatio="false"/>
+    <ImageView fx:id="backgroundImage1" fitWidth="960" fitHeight="600" preserveRatio="false" />
+
+    <ImageView fx:id="backgroundImage2" fitWidth="960" fitHeight="600" preserveRatio="false" />
+
+
 
     <VBox spacing="15" alignment="CENTER_LEFT" style="-fx-padding: 60;">
         <Button fx:id="startButton" text="Нова гра" onAction="#startNewGame" />
