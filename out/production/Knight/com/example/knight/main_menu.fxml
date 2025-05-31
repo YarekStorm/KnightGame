@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.example.knight.MainMenuController">
+
+    <ImageView fx:id="backgroundImage" fitWidth="960" fitHeight="600" preserveRatio="false"/>
+
+    <VBox spacing="15" alignment="CENTER_LEFT" style="-fx-padding: 60;">
+        <Button fx:id="startButton" text="Нова гра" onAction="#startNewGame" />
+        <Button fx:id="loadButton" text="Завантажити гру" onAction="#loadGame" />
+        <Button fx:id="settingsButton" text="Налаштування" onAction="#openSettings" />
+        <Button fx:id="exitButton" text="Вихід" onAction="#exitGame" />
+    </VBox>
+</StackPane>

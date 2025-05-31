@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.knight.MainController">
+    <top>
+        <Label text="Екіпірування Лицаря" style="-fx-font-size: 18px; -fx-padding: 10px;" />
+    </top>
+
+    <center>
+        <TableView fx:id="tableView">
+            <columns>
+                <TableColumn fx:id="nameColumn" text="Назва" />
+                <TableColumn fx:id="typeColumn" text="Тип" />
+                <TableColumn fx:id="weightColumn" text="Вага" />
+                <TableColumn fx:id="priceColumn" text="Ціна" />
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox spacing="10">
+            <padding>
+                <Insets top="10" bottom="10" left="10" right="10" />
+            </padding>
+            <Button text="Додати" onAction="#handleAdd" />
+            <Button text="Видалити" onAction="#handleDelete" />
+            <Button text="Сортувати за вагою" onAction="#handleSort" />
+            <Button text="Пошук за ціною" onAction="#handleFilter" />
+            <Button text="Загальна вартість" onAction="#handleTotalCost" />
+        </HBox>
+
+    </bottom>
+</BorderPane>
